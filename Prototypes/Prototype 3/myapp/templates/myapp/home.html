@@ -1,0 +1,70 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}Library Home{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+
+  
+<h1 style="color: rgb(0, 0, 0);"> <strong> Trending Books </style></strong> </h1>
+
+  <div class="book-gallery">
+    <div class="book">
+      <img src="{% get_media_prefix %}book_covers/The_Missing_Half.jpg" alt="The Missing Half" class="book-image">
+      <p> <strong>The Missing Half</strong><br>By Ashley Flowers — A gripping mystery full of secrets and suspense.</p>
+    </div>
+  
+    <div class="book">
+      <img src="{% get_media_prefix %}book_covers/Twisted_Games.jpg" alt="Twisted Games" class="book-image">
+      <p><strong>Twisted Games</strong><br>By Ana Huang — A royal forbidden romance filled with tension and heart.</p>
+    </div>
+  
+    <div class="book">
+      <img src="{% get_media_prefix %}book_covers/Twisted_Lies.webp" alt="Twisted Lies" class="book-image">
+      <p><strong>Twisted Lies</strong><br>By Ana Huang — A tale of love, deception, and redemption.</p>
+    </div>
+  
+    <div class="book">
+      <img src="{% get_media_prefix %}book_covers/Twisted_hate.webp" alt="Twisted Hate" class="book-image">
+      <p><strong>Twisted Hate</strong><br>By Ana Huang — Enemies to lovers in a fiery and passionate romance.</p>
+    </div>
+
+    <h2 style="color: rgb(0, 0, 0);"><strong> Recent Books Returned </strong> </h2>
+  
+    <div class="book">
+      <img src="{% get_media_prefix %}book_covers/A_Court_of_Mist_and_fury.jpg" alt="A Court of Mist and Fury" class="book-image">
+      <p><strong>A Court of Mist and Fury</strong><br>By Sarah J. Maas — Feyre’s journey through magic, love, and survival continues.</p>
+    </div>
+  
+    <div class="book">
+      <img src="{% get_media_prefix %}book_covers/A_Court_of_Silver_Flames.jpg" alt="A Court of Silver Flames" class="book-image">
+      <p><strong>A Court of Silver Flames</strong><br>By Sarah J. Maas — Nesta’s fiery transformation and redemption unfold in this fantasy epic.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <img src="{% get_media_prefix %}book_covers/A_Court_of_Thorns_and_Roses.jpg" alt="A Court of Thorns and Roses" class="book-image">
+    <p><strong>A Court of Thorns and Roses</strong><br>By Sarah J. Maas — When nineteen-year-old huntress Feyre kills a wolf in the woods</p>
+  </div>
+</div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 My Library | All rights reserved.
+  </footer>
+
+</body>
+</html>
+
+  {% endblock %}
