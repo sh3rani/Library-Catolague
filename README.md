@@ -13,3 +13,6 @@ It allows users to browse through a collection of books, view featured titles on
   
 *Reusable Components*
 - Commmon heade, navigation bar, and footer across all pages.
+
+- Documentation link
+- https://docs.google.com/presentation/d/1LtJHXt8B9vpu5dbjafZE8IroTcjjvSMk7AI0tpqYs10/edit?usp=sharing
