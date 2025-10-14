@@ -1,0 +1,111 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}Library Home{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .dropbtn {
+    background-color: #073768;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #19193b;}
+  </style>
+  </head>
+  <body style="background-color:white;">
+  
+  
+  <div class="dropdown">
+    <button class="dropbtn">Genre's</button>
+    <div class="dropdown-content">
+      <a href="#">Fantasy</a>
+      <a href="#">Romance</a>
+      <a href="#">Myster </a>
+    </div>
+  </div>
+
+<div class="book-gallery">
+  <div class="book">
+    <img src="{% get_media_prefix %}book_covers/The_Missing_Half.jpg" alt="The Missing Half" class="book-image">
+    <p> <strong>The Missing Half</strong><br>By Ashley Flowers — A gripping mystery full of secrets and suspense.</p>
+  </div>
+
+  <div class="book">
+    <img src="{% get_media_prefix %}book_covers/Twisted_Games.jpg" alt="Twisted Games" class="book-image">
+    <p><strong>Twisted Games</strong><br>By Ana Huang — A royal forbidden romance filled with tension and heart.</p>
+  </div>
+
+  <div class="book">
+    <img src="{% get_media_prefix %}book_covers/Twisted_Lies.webp" alt="Twisted Lies" class="book-image">
+    <p><strong>Twisted Lies</strong><br>By Ana Huang — A tale of love, deception, and redemption.</p>
+  </div>
+
+  <div class="book">
+    <img src="{% get_media_prefix %}book_covers/Twisted_hate.webp" alt="Twisted Hate" class="book-image">
+    <p><strong>Twisted Hate</strong><br>By Ana Huang — Enemies to lovers in a fiery and passionate romance.</p>
+  </div>
+
+  <div class="book">
+    <img src="{% get_media_prefix %}book_covers/A_Court_of_Mist_and_fury.jpg" alt="A Court of Mist and Fury" class="book-image">
+    <p><strong>A Court of Mist and Fury</strong><br>By Sarah J. Maas — Feyre’s journey through magic, love, and survival continues.</p>
+  </div>
+
+  <div class="book">
+    <img src="{% get_media_prefix %}book_covers/A_Court_of_Silver_Flames.jpg" alt="A Court of Silver Flames" class="book-image">
+    <p><strong>A Court of Silver Flames</strong><br>By Sarah J. Maas — Nesta’s fiery transformation and redemption unfold in this fantasy epic.</p>
+  </div>
+</div>
+
+<div class="book">
+  <img src="{% get_media_prefix %}book_covers/A_Court_of_Thorns_and_Roses.jpg" alt="A Court of Thorns and Roses" class="book-image">
+  <p><strong>A Court of Thorns and Roses</strong><br>By Sarah J. Maas — When nineteen-year-old huntress Feyre kills a wolf in the woods</p>
+</div>
+</div>
+
+<div class="book">
+<img src="{% get_media_prefix %}book_covers/The_Thrashers.jpg" alt="The_Thrashers" class="book-image">
+<p><strong>The Thrashers</strong><br>By Julie Soto — The unputdownable, unforgettable thriller </p>
+</div>
+</div>
+
+<div class="book">
+<img src="{% get_media_prefix %}book_covers/If_He_Had_Been_With_Me.jpg" alt="If He Had Been With Me" class="book-image">
+<p><strong>If he had been with me </strong><br>By Laura Nowlin —If he had been with me everything would have been different...</p>
+</div>
+</div>
+<footer>
+  © 2025 My Library | All rights reserved.
+</footer>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>Books</h1>
+    {% if user.is_authenticated %}
+      <a href="{% url 'catalog:book-add' %}" class="btn btn-success">Add Book</a>
+    {% endif %}
+  </div>
+
+ 
+  <form method="get" class="mb-3">
+    <div class="input-group">
+      <input name="q" value="{{ request.GET.q }}" class="form-control" placeholder="Search books...">
+      <button class="btn btn-outline-secondary">Search</button>
+    </div>
+  </form>
+
+  <div class="list-group">
+    {% for book in object_list %}
+      <a class="list-group-item list-group-item-action" href="{{ book.get_absolute_url }}">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{ book.title }}</h5>
+          <small>Available: {{ book.available_copies }}</small>
+        </div>
+        <p class="mb-1">{% for a in book.authors.all %}{{ a }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+      </a>
+    {% empty %}
+      <p>No books found.</p>
+    {% endfor %}
+  </div>
+
+
+
+{% endblock %}
+
+
+{% if user.is_staff %}
+  <a href="{% url 'catalog:book-add' %}" class="btn btn-success">Add Book</a>
+{% endif %}
